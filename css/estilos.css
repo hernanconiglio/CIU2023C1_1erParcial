@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Cut&family=Vast+Shadow&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 55px;
+    box-shadow: 1px 1px 15px #000;
+    background: #413939;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    z-index: 10;
+}
+
+header:hover {
+    height: 80px;
+    transition: 0.7s;
+    background: #390c39;
+}
+
+#menu, #menuRegister {
+    width: 700px;
+    padding-top: 10px;
+}
+
+#menu {
+    margin: auto;
+}
+
+#menuRegister {
+    width: 100%;
+    margin: auto;
+}
+
+#menu ul a, #menuRegister ul a {
+    color: #fb8fd2;
+    text-decoration: none;
+    font: 18px Arial, sans-serif;
+    padding: 13px 20px 13px 20px;
+}
+
+#menu #botonModo {
+    width: 10%;
+    height: min-content;
+}
+
+#menuRegister #botonModo {
+    width: 6%;
+    height: min-content;
+}
+
+#menu ul a:hover, #menuRegister ul a:hover {
+    transition: background-color 1.5s ease;
+    background-color: #990fae;
+    color: #fff;
+}
+
+#principal {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0 0 5%;
+}
+
+.imgFlyer {
+    position: relative;
+}
+
+.imgFlyer img {
+    width: 80%;
+    transform: translateX(0);
+    opacity: 1;
+    animation: animacion1 1s ease-out;
+
+}
+
+#logoFB, #logoIG, #logoTW, #logoFBf, #logoIGf, #logoTWf {
+    width: 30px;
+}
+
+.textosCuerpo {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    left: 20%;
+    position: relative;
+    color: #962e6c;
+    font: 18px Arial, sans-serif;
+    text-align: justify;
+    width: 50%;
+    transform: translateX(0);
+    opacity: 1;
+    animation: animacion1 1s ease-out;
+
+}
+
+@keyframes animacion1 {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+#detallesEvento {
+    font-family: 'Nova Cut', cursive;
+    padding: 50px 0 0 5%;
+    color: #962e6c;
+}
+
+#datosEvento {
+    font-family: 'Nova Cut', cursive;
+    padding: 0px 0 0 0;
+    color: #962e6c;
+    border: #990fae 2px solid;
+    border-radius: 10px;
+    margin: 0%;
+}
+
+#datosEvento p {
+    padding: 0px 0 0 0;
+    margin: 0%;
+}
+
+.datos {
+    color: #f7c439;
+    background-color: #2a021b;
+}
+
+#redesSociales {
+    padding: 0px 0 25px 0;
+    float: right;
+    
+}
+
+
+#enlacesFooter {
+    color: #fb8fd2;
+    text-decoration: none;
+    font: 18px Arial, sans-serif;
+    padding: 0px 0 0 0;
+    float: left;
+}
+
+#botonInicio {
+    transition: background-color 1s ease;
+    transition: width 1s ease;
+    color: #f5ecf1;
+    background-color: #990fae;
+    width: 85px;
+    padding: 20px 20px 20px 20px;
+}
+#botonInicio:hover {
+    transition: background-color 1.5s ease;
+    background-color: #f3c9e4;
+    transition: width 1.5s ease;
+    width: 100px;
+}
+
+#misDatos {
+    color: #6567ef;
+    font-family: 'Vast Shadow', cursive;
+    padding: 0px 20px 10px 20px;
+}
+
+#actividad {
+    color: #962e6c;
+    font-family: 'Vast Shadow', cursive;
+    font-size: large;
+    padding: 0px 20px 10px 20px;
+}
+
+#btnRegistro {
+    color: #f5ecf1;
+    background-color: #962e6c;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
