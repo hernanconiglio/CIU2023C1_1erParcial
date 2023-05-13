@@ -27,7 +27,7 @@ Para el desarrollo de la página se utilizaron las siguientes herramientas:
 Para utilizar la página, se debe abrir el archivo `index.html` en un navegador web.
 
 ## Link a la página
-https://hernanconiglio.github.io/landing-page-ciu/
+[Pagina en Netlify](https://645f9e3b5d79024d5e98b3f1--guileless-swan-ba7c41.netlify.app/)
 
 ## Capturas de pantalla
 ![Captura de pantalla 1](./img/captura1.jpg)

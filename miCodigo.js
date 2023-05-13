@@ -22,32 +22,32 @@ botonTema.addEventListener("click", function () {
     
 });
 
+// DOMCcontentLoaded espera que se cargue la página, porque al compartir ambos html el mismo js
+// ocurría que el js se ejecutaba antes de que se cargara el formulario, y no funcionaba. 
+document.addEventListener("DOMContentLoaded", function() {
+    const formRegistro = document.getElementById("formularioReg");
+    //const btnRegistro = document.getElementById("btnRegistro"); 
+    
+    // Agrego un event listener al botón "Registrarme"
+    formRegistro.addEventListener("submit", function(event) {
+      event.preventDefault(); // prevenir la acción por defecto del botón
+    
+    // Obtenengo los valores ingresados en los campos del formulario
+    const nombre = document.getElementById("inputNombre").value;
+    const apellido = document.getElementById("inputApellido").value;
+    const email = document.getElementById("inputEmail4").value;
+    const direccion = document.getElementById("inputAddress").value;
+    const ciudad = document.getElementById("inputCity").value;
+    const provincia = document.getElementById("inputState").value;
+    var novedades = document.getElementById("gridCheck").checked ? 'Si' : 'No';
+    const profes = "gabriel.molina@unahur.edu.ar,jesusnicolas.rios@unahur.edu.ar"
 
-const formulario = document.getElementById('formularioReg');
-const inputs = document.querySelectorAll('#formularioReg input');
-
-
-/* manejo del formulario y envío de datos */
-
-/*
-const form = document.querySelector('form');
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-  
-  const nombre = encodeURIComponent(document.getElementById('inputNombre').value);
-  const apellido = encodeURIComponent(document.getElementById('inputApellido').value);
-  const email = encodeURIComponent(document.getElementById('inputEmail4').value);
-  const direccion = encodeURIComponent(document.getElementById('inputAddress').value);
-  const ciudad = encodeURIComponent(document.getElementById('inputCity').value);
-  const provincia = encodeURIComponent(document.getElementById('inputState').value);
-  const novedades = document.getElementById('gridCheck').checked ? 'Sí' : 'No';
-  
-  const subject = encodeURIComponent('Primer Parcial 2023C1 Coniglio Hernán');
-  const body = encodeURIComponent(`Nombre: ${nombre}\nApellido: ${apellido}\nEmail: ${email}\nDirección: ${direccion}\nCiudad: ${ciudad}\nProvincia: ${provincia}\nQuiero recibir novedades: ${novedades}`);
-  const addresses = encodeURIComponent('profe1@unahur.edu.ar,profe2@unahur.edu.ar');
-  
-  const mailtoUrl = `mailto:${addresses}?subject=${subject}&body=${body}`;
-  
-  window.open(mailtoUrl);
+      // Crear el cuerpo del correo electrónico a enviar con los datos del formulario
+      const cuerpoEmail = `Nombres: ${nombre}%0AApellidos: ${apellido}%0AEmail: ${email}%0ADirección: ${direccion}%0ACiudad: ${ciudad}%0AProvincia: ${provincia}%0ANovedades: ${novedades}`;
+    
+      // Abro el programa de correo electrónico predeterminado del usuario y completo campos
+      window.location.href = `mailto:${profes}?subject=Primer Parcial 2023C1 Coniglio Hernan&body=${cuerpoEmail}`;
+      alert("Gracias por registrarte, te enviaremos un correo electrónico con tu Nro de Ticket.");
+      window. open("./index.html" , "_self" )
+    });
 });
-*/
